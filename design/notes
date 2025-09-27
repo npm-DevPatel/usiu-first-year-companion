@@ -1,0 +1,37 @@
+Design Notes for USIU First-Year Companion
+
+Overall Approach
+The design of the USIU First-Year Companion was guided by three main goals:
+Clarity – first-year students should be able to navigate and find useful information without confusion.
+Consistency – visual elements such as colors, buttons, and cards remain consistent across sections.
+Accessibility – both light mode and dark mode were implemented to support different preferences and environments.
+
+Layout Choices
+Header: Contains the project title and a tagline to set context. Positioned at the top for immediate recognition.
+Card-Based Sections: Each section such as study tips, commuting info, and the estimator is displayed inside a card with shadows and rounded corners. This improves readability and makes the content feel organized.
+Footer: Provides a clean finish with minimal text to avoid clutter.
+
+Color and Theme
+Primary Accent: A shade of blue (hex code 3a86ff) was chosen as it reflects trust, calmness, and professionalism.
+Light Mode: Uses a clean white background with dark text for readability during the day.
+Dark Mode: Switches background to near-black with light text to reduce eye strain at night.
+Theme Toggle: Implemented so users can switch instantly, supporting different environments.
+
+Typography
+Font: System UI fonts such as Segoe UI, Roboto, and Ubuntu were used for readability across devices.
+Headings: Larger, accent-colored headings create hierarchy.
+Body Text: Regular, legible size with balanced line spacing for easy scanning.
+
+Estimator Tool
+Inputs: Students can enter commuting details and other cost-related values.
+Output: Provides an estimated monthly cost to help students plan finances.
+Reasoning: Many first-year students struggle with budgeting, so including a tool adds practical value beyond static information.
+
+Wireframes
+Home Page Wireframe: Shows header, tagline, and three main cards stacked vertically.
+Estimator Wireframe: Dedicated card with form fields and calculate button.
+Theme Toggle Wireframe: Small button in the header for switching modes.
+
+Design Trade-offs
+A minimalist design was chosen over heavy visuals to keep load times fast and make the site usable on slow internet connections.
+Only essential interactive elements were added to balance simplicity and functionality.

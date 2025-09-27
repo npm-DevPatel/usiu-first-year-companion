@@ -1,0 +1,81 @@
+USIU First-Year Companion
+1. Project Overview
+
+The USIU First-Year Companion is a simple web-based orientation and cost estimator tool for first-year students.
+It helps students estimate weekly expenses (commuting, meals, personal costs) and provides a basic study plan.
+
+The project demonstrates:
+
+HTML, CSS, and JavaScript integration
+
+Responsive design with light and dark themes
+
+Basic interactivity and data handling in the browser
+
+Dockerized deployment for portability
+
+2. Deliverables
+
+HTML repo link: Contains the base HTML structure (index.html)
+
+CSS + Docker repo link: Contains styling (styles.css) and deployment files (Dockerfile, .dockerignore)
+
+README: Included in repo
+
+Screenshots: Included in design/ folder (wireframes and final screenshots)
+
+3. How to Run the Project
+Option A: Run locally
+
+Clone this repository:
+
+git clone https://github.com/npm-devpatel/usiu-first-year-companion.git
+cd usiu-first-year-companion/public
+
+
+Open index.html in a browser.
+
+Option B: Run with Docker
+
+Build the image:
+
+docker build -t usiu-estimator .
+
+
+Run the container:
+
+docker run -d -p 8080:80 usiu-estimator
+
+
+Open http://localhost:8080
+ in a browser.
+
+4. Project Structure
+usiu-first-year-companion/
+├─ design/
+│   ├─ wireframe-home.png
+│   ├─ wireframe-estimator.png
+│   └─ notes.md
+├─ public/
+│   ├─ index.html
+│   ├─ styles.css
+│   └─ script.js
+├─ Dockerfile
+├─ .dockerignore
+└─ README.md
+
+5. Features
+
+Interactive Greeting and Plan Generator
+
+Cost Estimator: Calculates weekly expenses
+
+Theme Toggler: Switch between light and dark mode
+
+Responsive UI: Clean, accessible design
+
+6. Credits
+
+Developed as part of IST4035 – Assignment at USIU.
+
+Demo content only

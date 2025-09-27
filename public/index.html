@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>USIU First-Year Companion (v1)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>USIU First-Year Companion</h1>
+    <p class="tagline">Your quick guide to campus life</p>
+  </header>
+
+  <main>
+    <!-- Greeting Section -->
+    <section class="card">
+      <h2 id="greeting">Hello!</h2>
+      <p>Welcome to your orientation helper. Let us estimate your weekly costs and set up your theme.</p>
+      <div class="button-group">
+        <button id="run">Run Estimator</button>
+        <button id="theme">Toggle Theme</button>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="card">
+      <h3>Weekly Summary</h3>
+      <pre id="summary">Run the estimator to see your weekly plan…</pre>
+    </section>
+  </main>
+
+  <footer>
+    <small>© USIU Student Affairs (Demo v1)</small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("run").addEventListener("click", runEstimator);
+    document.getElementById("theme").addEventListener("click", toggleTheme);
+  </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+:root {
+  --accent: #3a86ff;
+  --bg-light: #ffffff;
+  --bg-dark: #111111;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --card-bg: #f9f9f9;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* derived variables (used by components) */
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --card: var(--card-bg);
+  --button-bg: var(--accent);
+  --button-text: #ffffff;
+  --muted: #666666;
+  --pre-bg: #f1f1f1;
+  --transition-fast: 180ms ease;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --card: #1e1e1e;
+  --button-bg: #2a66d9;
+  --button-text: #ffffff;
+  --muted: #bdbdbd;
+  --pre-bg: #232323;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 1.5rem;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+/* Header & tagline */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-top: 4px solid var(--accent);
+  padding-top: 0.5rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  letter-spacing: 0.2px;
+}
+
+header .tagline {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+/* Layout */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: background var(--transition-fast), box-shadow 220ms ease;
+}
+
+/* Headings inside cards */
+h2, h3 {
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+/* Buttons */
+button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease, background 160ms ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(58,134,255,0.12);
+}
+
+/* Summary pre block */
+pre {
+  background: var(--pre-bg);
+  padding: 1rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  color: var(--text);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-top: 0.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 420px) {
+  body {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button-group {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+}
